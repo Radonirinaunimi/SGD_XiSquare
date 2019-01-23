@@ -12,7 +12,7 @@
 #include <NNPDF/thpredictions.h>
 #include <NNPDF/pdfset.h>
 
-// Define a class ToyPDF which inherites from the 
+// Define a class ToyPDF which inherites from the
 // main class NNPDF
 class ToyPDF: public NNPDF::PDFSet {
 
@@ -22,16 +22,16 @@ class ToyPDF: public NNPDF::PDFSet {
         NNPDF::real ComputePolDer1(const std::vector<NNPDF::real>) const;
         NNPDF::real ComputePolDer2(const std::vector<NNPDF::real>) const;
         NNPDF::real ComputePolNum1(const std::vector<NNPDF::real>) const;
-        // Define the method that initializes the generation of the random numbers 
+        // Define the method that initializes the generation of the random numbers
         double a1, a2;
 	int flag;
 
     public:
 	// Define the constructor that is going to be called
-	// each time we call ToyPDF	
+	// each time we call ToyPDF
         ToyPDF(std::string const&, double, double, int);
 	// Define the method that gets the PDF
-        void GetPDF(NNPDF::real const& x, NNPDF::real const& Q2, int const& n, NNPDF::real* pdf) const;	
+        void GetPDF(NNPDF::real const& x, NNPDF::real const& Q2, int const& n, NNPDF::real* pdf) const;
 
 };
 
