@@ -28,3 +28,16 @@ Network::Network(std::vector<int> nn)
         // }
 
 }
+
+
+// Eigen::MatrixXd Neural::feed_forward(Eigen::MatrixXd input)
+// {
+// 	// Define the first layer to be the input
+// 	a[0] = input;
+//
+// 	// Compute the next layer
+// 	for (int i = 1; i < hidden_layers + 2; i++)
+// 	{
+// 		a[i] = a[i-1];
+// 	}
+// }

@@ -3,7 +3,7 @@
 #include<eigen3/Eigen/Dense>
 
 
-std::vector<double> _dot(Eigen::MatrixXd M, Eigen::MatrixXd v){
+std::vector<double> _dot0(Eigen::MatrixXd M, Eigen::MatrixXd v){
 
 	std::vector<double> result;
 	double value;
@@ -14,6 +14,21 @@ std::vector<double> _dot(Eigen::MatrixXd M, Eigen::MatrixXd v){
 	}
 
 	return result;
+
+}
+
+Eigen::VectorXd _dot(Eigen::MatrixXd M, Eigen::MatrixXd v){
+
+	std::vector<double> result;
+	double value;
+
+	for(int i = 0; i < M.rows(); i++){
+		value = (M.row(i).array() * v.array()).sum();
+		result.push_back(value);
+	}
+
+	Eigen::VectorXd test = Eigen::Map<Eigen::VectorXd, Eigen::Unaligned> (result.data(), result.size());
+	return test;
 
 }
 
@@ -61,15 +76,19 @@ int main(){
 	std::cout << "Elementwise product between Matrices: \n" << M1.array() * M1.array() << "\n";
 
 	// Test the function which computes the _dot product
-	std::vector<double> vX = _dot(M1, Vm);
+	std::vector<double> vX1 = _dot0(M1, Vm);
 	std::cout << "\n" << std::endl;
 	std::cout << "Result: " << "\n";
-	for(int i = 0; i <vX.size(); i++){
-		std::cout << vX[i] << std::endl;
+	for(int i = 0; i <vX1.size(); i++){
+		std::cout << vX1[i] << std::endl;
 	}
 
 	// Eigen::VectorXd vE(vX.data());
 	// std::cout << "Eigen Vec: " << vE << "\n";
+
+	Eigen::VectorXd vX2 = _dot(M1, Vm);
+	std::cout << "\n" << std::endl;
+	std::cout << "Comparison to the above result: \n" << vX2 << std::endl;
 
 	return 0;
 

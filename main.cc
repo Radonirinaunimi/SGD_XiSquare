@@ -284,8 +284,8 @@ int main()
 
 
 	// Check the Neural Network
-	std::vector<int> input_x = {7, 5, 16, 8};
-	Network net(input_x);
+	std::vector<int> n_layers = {7, 5, 16, 8};
+	Network net(n_layers);
 
 
 	return 0;
