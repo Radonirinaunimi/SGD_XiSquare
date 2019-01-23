@@ -93,7 +93,8 @@ int main()
 	cout << "\n";
 
 	// Check the Neural Network
-	// NN_structure net({2,4,5,6,2});
+	// std::vector<int> input_x = {7, 5, 16, 8};
+	// Network net(input_x);
 
 	// Using the ToyPDF
 	// Initialize the coefficient of the polynomial
@@ -196,7 +197,7 @@ int main()
 
 	string space = "    ";
 	ofstream file("../Chi2Data.txt");
-	int iteration = 1000;
+	int iteration = 10;
 	double m = 1.3;
 	double n = ((double) rand() / RAND_MAX) + 1;
 	NNPDF::real h = 1e-4;
@@ -280,6 +281,11 @@ int main()
 		}
 		file.close();
 	}
+
+
+	// Check the Neural Network
+	std::vector<int> input_x = {7, 5, 16, 8};
+	Network net(input_x);
 
 
 	return 0;

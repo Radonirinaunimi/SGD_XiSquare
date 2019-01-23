@@ -1,7 +1,7 @@
 #include "NN.h"
 
 
-Network::NN_structure(std::vector<int> nn)
+Network::Network(std::vector<int> nn)
 {
 	// Define the number of the hidden layers
 	this->hidden_layers = nn.size() - 2;
@@ -13,9 +13,18 @@ Network::NN_structure(std::vector<int> nn)
 
 
 	// Loop over the structure of the NN
-	for (int i = 0; i < nn.size() - 1; i++)
+	for (int i = 0; i < hidden_layers + 1; i++)
 	{
-		W[i] = Eigen::MatrixXd::Random(i, i+1);
-		B[i] = Eigen::MatrixXd::Random(1, i+1);
+		W[i] = Eigen::MatrixXd::Random(nn[i], nn[i+1]);
+		B[i] = Eigen::MatrixXd::Random(1, nn[i+1]);
 	}
+
+	std::cout << "It works!!" << std::endl;
+
+	// // Try to print some results
+        // for(int i = 0; i < B.size(); i++){
+        //         std::cout << B[i] << std::endl;
+        //         std::cout << "\n" << std::endl;
+        // }
+
 }

@@ -1,12 +1,17 @@
 [
   {
-    "directory": "/home/tanjona/Documents/Repositories/N3PDF/Gradient/gradients/checkDISgrad/FirstTry/build",
-    "command": "c++ -IcheckDISgrad@exe -I. -I.. -I/home/tanjona/anaconda3/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -O0 -g -std=c++14  -MD -MQ 'checkDISgrad@exe/main.cc.o' -MF 'checkDISgrad@exe/main.cc.o.d' -o 'checkDISgrad@exe/main.cc.o' -c ../main.cc",
+    "directory": "/home/tanjona/Documents/Repositories/myRepos/SDG_Chi2/SGD_XiSquare/build",
+    "command": "c++  -IcheckDISgrad@exe -I. -I.. -I/home/tanjona/anaconda3/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -O0 -g -std=c++14 -MD -MQ 'checkDISgrad@exe/main.cc.o' -MF 'checkDISgrad@exe/main.cc.o.d' -o 'checkDISgrad@exe/main.cc.o' -c ../main.cc",
     "file": "../main.cc"
   },
   {
-    "directory": "/home/tanjona/Documents/Repositories/N3PDF/Gradient/gradients/checkDISgrad/FirstTry/build",
-    "command": "c++ -IcheckDISgrad@exe -I. -I.. -I/home/tanjona/anaconda3/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -O0 -g -std=c++14  -MD -MQ 'checkDISgrad@exe/toypdf_toy.cc.o' -MF 'checkDISgrad@exe/toypdf_toy.cc.o.d' -o 'checkDISgrad@exe/toypdf_toy.cc.o' -c ../toypdf/toy.cc",
+    "directory": "/home/tanjona/Documents/Repositories/myRepos/SDG_Chi2/SGD_XiSquare/build",
+    "command": "c++  -IcheckDISgrad@exe -I. -I.. -I/home/tanjona/anaconda3/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -O0 -g -std=c++14 -MD -MQ 'checkDISgrad@exe/toypdf_toy.cc.o' -MF 'checkDISgrad@exe/toypdf_toy.cc.o.d' -o 'checkDISgrad@exe/toypdf_toy.cc.o' -c ../toypdf/toy.cc",
     "file": "../toypdf/toy.cc"
+  },
+  {
+    "directory": "/home/tanjona/Documents/Repositories/myRepos/SDG_Chi2/SGD_XiSquare/build",
+    "command": "c++  -IcheckDISgrad@exe -I. -I.. -I/home/tanjona/anaconda3/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -O0 -g -std=c++14 -MD -MQ 'checkDISgrad@exe/NN_NN.cc.o' -MF 'checkDISgrad@exe/NN_NN.cc.o.d' -o 'checkDISgrad@exe/NN_NN.cc.o' -c ../NN/NN.cc",
+    "file": "../NN/NN.cc"
   }
 ]

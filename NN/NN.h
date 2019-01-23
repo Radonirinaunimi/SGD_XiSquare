@@ -3,6 +3,7 @@
 #include <string>
 #include <ctime>
 #include <iostream>
+#include <vector>
 #include <stdlib.h>
 #include <eigen3/Eigen/Dense>
 
@@ -11,7 +12,7 @@ class Network{
 
 	public:
 		// Define the function which will define the structure of the NN
-		NN_structure(std::vector<int> nn);
+		Network(std::vector<int> nn);
 
 		// Define the vectors which will contain the Weights and Biases
 		std::vector<Eigen::MatrixXd> W;
