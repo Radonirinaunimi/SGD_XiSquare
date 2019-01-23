@@ -8,6 +8,7 @@
 #include <NNPDF/chisquared.h>
 
 #include "toypdf/toy.h"
+#include "NN/NN.h"
 
 
 using namespace NNPDF;
@@ -90,6 +91,9 @@ int main()
 	ComputeChi2(&exp, 1, LHAtheo.GetObs(), &chi2lhapdf);
 	cout << "For DIS-LHAPDF we get: " << chi2lhapdf << endl;
 	cout << "\n";
+
+	// Check the Neural Network
+	// NN_structure net({2,4,5,6,2});
 
 	// Using the ToyPDF
 	// Initialize the coefficient of the polynomial
