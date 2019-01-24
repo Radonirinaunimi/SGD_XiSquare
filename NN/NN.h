@@ -16,7 +16,7 @@ class Network{
 
 		// Define the vectors which will contain the Weights and Biases
 		std::vector<Eigen::MatrixXd> W;
-		std::vector<Eigen::MatrixXd> B;
+		std::vector<Eigen::VectorXd> B;
 
 		// Define the method that does the feed forward
 		Eigen::MatrixXd feed_forward(std::vector<double> input);
@@ -29,11 +29,11 @@ class Network{
 		int hidden_layers;
 
 		// Define the vector which will contain the hidden layers
-		std::vector<Eigen::MatrixXd> a;
+		std::vector<Eigen::VectorXd> a;
 
 		// Define the vectors which will contain the derivatives of W & B
 		std::vector<Eigen::MatrixXd> dW;
-		std::vector<Eigen::MatrixXd> dB;
+		std::vector<Eigen::VectorXd> dB;
 
 };
 

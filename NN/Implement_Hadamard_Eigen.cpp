@@ -1,7 +1,14 @@
 #include<iostream>
 #include<vector>
+#include<cmath>
 #include<eigen3/Eigen/Dense>
+#include<eigen3/Eigen/Core>
 
+// Define the Sigmoid function
+double Sigmoid(double x)
+{
+	return 1 / (1 + std::exp(-x));
+}
 
 std::vector<double> _dot0(Eigen::MatrixXd M, Eigen::MatrixXd v){
 
@@ -17,13 +24,13 @@ std::vector<double> _dot0(Eigen::MatrixXd M, Eigen::MatrixXd v){
 
 }
 
-Eigen::VectorXd _dot(Eigen::MatrixXd M, Eigen::MatrixXd v){
+Eigen::VectorXd _dot(Eigen::MatrixXd M, Eigen::VectorXd v){
 
 	std::vector<double> result;
 	double value;
 
 	for(int i = 0; i < M.rows(); i++){
-		value = (M.row(i).array() * v.array()).sum();
+		value = (M.row(i).array() * v.transpose().array()).sum();
 		result.push_back(value);
 	}
 
@@ -83,12 +90,18 @@ int main(){
 		std::cout << vX1[i] << std::endl;
 	}
 
-	// Eigen::VectorXd vE(vX.data());
-	// std::cout << "Eigen Vec: " << vE << "\n";
 
-	Eigen::VectorXd vX2 = _dot(M1, Vm);
+	Eigen::VectorXd Vm2 = Eigen::VectorXd::Random(3);
+	std::cout << "This is the result: " << (M1.row(1).array() * Vm2.transpose().array()).sum()  << "\n";
+	Eigen::VectorXd vX2 = _dot(M1, Vm2);
 	std::cout << "\n" << std::endl;
 	std::cout << "Comparison to the above result: \n" << vX2 << std::endl;
+
+	// Apply the Sigmoid to Eigen elements
+	std::cout << "\n" << std::endl;
+	std::cout << "When applying the Sigmoid: " << "\n";
+	std::cout << vX2.unaryExpr(&Sigmoid) << std::endl;
+
 
 	return 0;
 
