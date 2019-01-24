@@ -1,4 +1,5 @@
 #include "NN.h"
+#include "../tools/math.h"
 
 
 Network::Network(std::vector<int> nn)
@@ -30,7 +31,7 @@ Network::Network(std::vector<int> nn)
 }
 
 
-// Eigen::MatrixXd Neural::feed_forward(std::vector<double> input)
+// Eigen::VectorXd Neural::feed_forward(std::vector<double> input)
 // {
 // 	// Define the first layer to be the input
 // 	a[0] = Eigen::Map<Eigen::VectorXd, Eigen::Unaligned> (input.data(), input.size());
@@ -38,6 +39,9 @@ Network::Network(std::vector<int> nn)
 // 	// Compute the next layer
 // 	for (int i = 1; i < hidden_layers + 2; i++)
 // 	{
-// 		a[i] = a[i-1];
+// 		a[i] = _dot(W[i-1], a[i-1]) + B[i-1];
+// 		// a[i] = (_dot(W[i-1], a[i-1]) + B[i-1]).unaryExpr(&Sigmoid);
 // 	}
+//
+//	return a[hidden_layers + 1];
 // }

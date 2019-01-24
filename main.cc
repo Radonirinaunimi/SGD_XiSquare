@@ -9,6 +9,7 @@
 
 #include "toypdf/toy.h"
 #include "NN/NN.h"
+#include "tools/math.h"
 
 
 using namespace NNPDF;

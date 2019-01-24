@@ -1,5 +1,5 @@
 project('checkDISgrad', 'cpp')
 nnpdf = dependency('nnpdf')
 lhapdf = dependency('lhapdf')
-e = executable('checkDISgrad', 'main.cc', 'toypdf/toy.cc', 'NN/NN.cc', dependencies: [nnpdf, lhapdf])
+e = executable('checkDISgrad', 'main.cc', 'toypdf/toy.cc', 'NN/NN.cc', 'tools/math.cc',dependencies: [nnpdf, lhapdf])
 test('checkDISgrad', e)
