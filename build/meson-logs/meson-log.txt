@@ -1,0 +1,60 @@
+Build started at 2019-01-24T18:12:53.103518
+Main binary: /usr/bin/python3
+Python system: Linux
+The Meson build system
+Version: 0.47.2
+Source dir: /home/tanjona/Documents/myRepos/SGD_XiSquare
+Build dir: /home/tanjona/Documents/myRepos/SGD_XiSquare/build
+Build type: native build
+Project name: checkDISgrad
+Project version: undefined
+Sanity testing C++ compiler: c++
+Is cross compiler: False.
+Sanity check compiler command line: c++ /home/tanjona/Documents/myRepos/SGD_XiSquare/build/meson-private/sanitycheckcpp.cc -o /home/tanjona/Documents/myRepos/SGD_XiSquare/build/meson-private/sanitycheckcpp.exe
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/tanjona/Documents/myRepos/SGD_XiSquare/build/meson-private/sanitycheckcpp.exe
+Native C++ compiler: c++ (gcc 8.2.0 "c++ (Ubuntu 8.2.0-7ubuntu1) 8.2.0")
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Found pkg-config: /home/tanjona/anaconda3/bin/pkg-config (0.29.2)
+Determining dependency 'nnpdf' with pkg-config executable '/home/tanjona/anaconda3/bin/pkg-config'
+Called `/home/tanjona/anaconda3/bin/pkg-config --modversion nnpdf` -> 0
+"1.2.0b5"
+Called `/home/tanjona/anaconda3/bin/pkg-config --cflags nnpdf` -> 0
+-std=c++14 -I/home/tanjona/anaconda3/include
+Called `/home/tanjona/anaconda3/bin/pkg-config nnpdf --libs` -> 0
+-L/home/tanjona/anaconda3/lib -lnnpdf
+Called `/home/tanjona/anaconda3/bin/pkg-config nnpdf --libs` -> 0
+-L/home/tanjona/anaconda3/lib -lnnpdf
+Running compile:
+Working directory:  /tmp/tmp0nsgd0cz
+Command line:  c++ /tmp/tmp0nsgd0cz/testfile.cpp -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp0nsgd0cz/output.obj -O0 -fpermissive --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/x86_64-linux-gnu/8/
+programs: =/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../x86_64-linux-gnu/bin/
+libraries: =/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../x86_64-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/8/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/8/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../x86_64-linux-gnu/lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
+Native dependency nnpdf found: YES "1.2.0b5"
+Determining dependency 'lhapdf' with pkg-config executable '/home/tanjona/anaconda3/bin/pkg-config'
+Called `/home/tanjona/anaconda3/bin/pkg-config --modversion lhapdf` -> 0
+6.2.1
+Called `/home/tanjona/anaconda3/bin/pkg-config --cflags lhapdf` -> 0
+-I/home/tanjona/anaconda3/include
+Called `/home/tanjona/anaconda3/bin/pkg-config lhapdf --libs` -> 0
+-L/home/tanjona/anaconda3/lib -lLHAPDF
+Called `/home/tanjona/anaconda3/bin/pkg-config lhapdf --libs` -> 0
+-L/home/tanjona/anaconda3/lib -lLHAPDF
+Native dependency lhapdf found: YES 6.2.1
+Adding test "checkDISgrad"
+Build targets in project: 1
+Found ninja-1.8.2 at /usr/bin/ninja

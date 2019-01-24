@@ -285,9 +285,13 @@ int main()
 
 
 	// Check the Neural Network
-	std::vector<int> n_layers = {7, 5, 16, 8};
+	std::vector<int> n_layers = {4, 5, 16, 8};
 	Network net(n_layers);
 
+	// Check the feed forward
+	std::vector<double> x_input = {0.8, 0.9, 0.6, 0.4};
+	Eigen::VectorXd y_output = net.feed_forward(x_input);
+	std::cout << "y_expected output: \n" << y_output << std::endl;
 
 	return 0;
 }

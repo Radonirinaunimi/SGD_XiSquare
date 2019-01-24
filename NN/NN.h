@@ -19,7 +19,7 @@ class Network{
 		std::vector<Eigen::VectorXd> B;
 
 		// Define the method that does the feed forward
-		Eigen::MatrixXd feed_forward(std::vector<double> input);
+		Eigen::VectorXd feed_forward(std::vector<double> input);
 
 		// Define the method that does the Backpropagation
 		void back_propagation(std::vector<double> y_exp);
