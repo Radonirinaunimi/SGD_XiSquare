@@ -39,6 +39,22 @@ Eigen::VectorXd _dot(Eigen::MatrixXd M, Eigen::VectorXd v){
 
 }
 
+Eigen::VectorXd Hadamard(Eigen::VectorXd v1, Eigen::VectorXd v2)
+{
+	std::vector<double> result;
+	double value;
+
+	for(int i = 0; i < v1.size(); i++)
+	{
+		value = v1(i) * v2(i);
+		result.push_back(value);
+	}
+
+
+	Eigen::VectorXd test = Eigen::Map<Eigen::VectorXd, Eigen::Unaligned> (result.data(), result.size());
+	return test;
+}
+
 int main(){
 
 	// Define a Matrix with undefined size
@@ -92,15 +108,21 @@ int main(){
 
 
 	Eigen::VectorXd Vm2 = Eigen::VectorXd::Random(3);
-	std::cout << "This is the result: " << (M1.row(1).array() * Vm2.transpose().array()).sum()  << "\n";
-	Eigen::VectorXd vX2 = _dot(M1, Vm2);
 	std::cout << "\n" << std::endl;
-	std::cout << "Comparison to the above result: \n" << vX2 << std::endl;
+	Eigen::VectorXd vX2 = _dot(M1, Vm2);
+	std::cout << "Comparison to the above result for Vx2: \n" << vX2 << std::endl;
 
 	// Apply the Sigmoid to Eigen elements
 	std::cout << "\n" << std::endl;
 	std::cout << "When applying the Sigmoid: " << "\n";
 	std::cout << vX2.unaryExpr(&Sigmoid) << std::endl;
+
+
+	// Test the Hadamard product
+	std::cout << "\n" << std::endl;
+	std::cout << "This is the Hadamard product vX2*vX2: :" << "\n";
+	std::cout << Hadamard(vX2, vX2) << std::endl;
+
 
 
 	return 0;

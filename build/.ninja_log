@@ -39,3 +39,16 @@
 5131	5486	1548412098	checkDISgrad	61117e3f54a8c479
 2	1639	1548412281	checkDISgrad@exe/NN_NN.cc.o	598ed0803aae6e16
 1640	2012	1548412282	checkDISgrad	61117e3f54a8c479
+1	1874	1548428171	checkDISgrad@exe/tools_math.cc.o	861f0aec029ac29d
+1	1988	1548428171	checkDISgrad@exe/NN_NN.cc.o	598ed0803aae6e16
+0	2542	1548428171	checkDISgrad@exe/main.cc.o	26ae8cce98b69bb4
+1	4432	1548428173	checkDISgrad@exe/toypdf_toy.cc.o	72e13a0a5223cf8a
+4432	4727	1548428174	checkDISgrad	61117e3f54a8c479
+3	2028	1548428321	checkDISgrad@exe/main.cc.o	26ae8cce98b69bb4
+2028	2314	1548428321	checkDISgrad	61117e3f54a8c479
+1	1985	1548428377	checkDISgrad@exe/main.cc.o	26ae8cce98b69bb4
+1985	2289	1548428378	checkDISgrad	61117e3f54a8c479
+2	1259	1548452653	checkDISgrad@exe/NN_NN.cc.o	598ed0803aae6e16
+1	1612	1548452653	checkDISgrad@exe/main.cc.o	26ae8cce98b69bb4
+1	1074	1548452721	checkDISgrad@exe/tools_math.cc.o	861f0aec029ac29d
+1074	1303	1548452721	checkDISgrad	61117e3f54a8c479

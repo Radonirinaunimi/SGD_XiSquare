@@ -22,7 +22,7 @@ class Network{
 		Eigen::VectorXd feed_forward(std::vector<double> input);
 
 		// Define the method that does the Backpropagation
-		void back_propagation(std::vector<double> y_exp);
+		void back_propagation(Eigen::VectorXd y_exp);
 
 	private:
 		// Define the number of hidden layers

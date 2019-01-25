@@ -93,10 +93,6 @@ int main()
 	cout << "For DIS-LHAPDF we get: " << chi2lhapdf << endl;
 	cout << "\n";
 
-	// Check the Neural Network
-	// std::vector<int> input_x = {7, 5, 16, 8};
-	// Network net(input_x);
-
 	// Using the ToyPDF
 	// Initialize the coefficient of the polynomial
 	// InitializePol();
@@ -198,7 +194,7 @@ int main()
 
 	string space = "    ";
 	ofstream file("../Chi2Data.txt");
-	int iteration = 10;
+	int iteration = 100;
 	double m = 1.3;
 	double n = ((double) rand() / RAND_MAX) + 1;
 	NNPDF::real h = 1e-4;
@@ -291,6 +287,7 @@ int main()
 	// Check the feed forward
 	std::vector<double> x_input = {0.8, 0.9, 0.6, 0.4};
 	Eigen::VectorXd y_output = net.feed_forward(x_input);
+	std::cout << "\n" << std::endl;
 	std::cout << "y_expected output: \n" << y_output << std::endl;
 
 	return 0;

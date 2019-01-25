@@ -10,3 +10,6 @@ double Sigmoid(double x);
 
 // Initialize the dot product
 Eigen::VectorXd _dot(Eigen::MatrixXd M, Eigen::VectorXd v);
+
+// Initialize the Hadamard product
+Eigen::VectorXd Hadamard(Eigen::VectorXd v1, Eigen::VectorXd v2);

@@ -26,7 +26,6 @@ Network::Network(std::vector<int> nn)
         //         std::cout << B[i] << std::endl;
         //         std::cout << "\n" << std::endl;
         // }
-
 }
 
 
@@ -43,3 +42,9 @@ Eigen::VectorXd Network::feed_forward(std::vector<double> input)
 
      return a[hidden_layers + 1];
 }
+
+
+// void Network::back_propagation(Eigen::VectorXd y_exp)
+// {
+// 	dB[hidden_layers] = a[hidden_layers + 1] - y_exp
+// }
