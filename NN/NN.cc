@@ -38,8 +38,7 @@ Eigen::VectorXd Network::feed_forward(std::vector<double> input)
 	// Compute the next layer
 	for (int i = 1; i < hidden_layers + 2; i++)
 	{
-		a[i] = _dot(W[i-1], a[i-1]) + B[i-1];
-		// a[i] = (_dot(W[i-1], a[i-1]) + B[i-1]).unaryExpr(&Sigmoid);
+		a[i] = (_dot(W[i-1], a[i-1]) + B[i-1]).unaryExpr(&Sigmoid);
 	}
 
      return a[hidden_layers + 1];
