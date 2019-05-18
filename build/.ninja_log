@@ -1,4 +1,0 @@
-# ninja log v5
-0	1504	1548176782	checkDISgrad@exe/main.cc.o	26ae8cce98b69bb4
-0	3277	1548176784	checkDISgrad@exe/toypdf_toy.cc.o	72e13a0a5223cf8a
-3277	3507	1548176784	checkDISgrad	a3ba0eea3fee187
